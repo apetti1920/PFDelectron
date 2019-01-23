@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <!-- Doc Head -->
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>PFD Dashboard</title>
+
+        <!-- Insert this line above script imports  -->
+        <script>
+            if (typeof module === 'object') {
+                window.module = module;
+                module = undefined;
+            }
+        </script>
+
+        <!-- normal script imports etc  -->
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="semantic/components/alert.js"></script>
+        <script src="./static/js/indicators.js"></script>
+
+        <!-- Insert this line after script imports -->
+        <script>if (window.module) module = window.module;</script>
+
+        <!-- Page Stylesheets -->
+        <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="semantic/components/alert.css">
+        <link rel="stylesheet" href="./static/css/dashboard.css">
+    </head>
+
+    <!-- Doc Body -->
+    <body>
+
+        <!-- Title Bar -->
+        <div class="ui top attached menu" id="menubar">
+            <!-- Menu Button -->
+            <button class="ui basic button" onclick="menu_button()">
+                <i class="sidebar icon"></i>
+                Menu
+            </button>
+
+            <!-- Title Bar -->
+            <h1 class="ui header" id="headerLabel">Main</h1>
+        </div>
+
+        <!-- Main Content -->
+        <div class="ui bottom attached segment pushable">
+            <!-- Side Bar -->
+            <div class="ui labeled icon left inline vertical sidebar menu uncover animating" style="" id="menu">
+                <!-- Side Bar Items -->
+                <div class="ui items">
+                    <!-- Reports Button -->
+                    <div class="item">
+                        <button class="ui basic button" onclick="reports_button()">
+                            <i class="block layout icon"></i>
+                            Reports
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Body Content -->
+            <div class="pusher">
+                <!-- Dashboard Section -->
+                <div class="ui basic segment">
+                    <!-- Section Header -->
+                    <h3 class="ui top attached header">
+                        Dashboard
+                    </h3>
+
+                    <!-- Section Content -->
+                    <div class="ui attached segment">
+                        <div class="ui two column grid">
+                            <!-- Depth Graphic Area -->
+                            <div class="column">
+                                <div class="ui segment" id="depth_canvas"></div>
+                            </div>
+
+                            <!-- IMU Graphic Area -->
+                            <div class="column">
+                                <div class="ui segment" id="imu_canvas"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Communications Section -->
+                <div class="ui basic segment">
+                    <!-- Section Header -->
+                    <h3 class="ui top attached header">
+                        Communications
+                    </h3>
+
+                    <!-- Indicatior Lights -->
+                    <div class="ui attached segment">
+                        <div class="ui three column grid">
+                            <!-- Connected Indicator -->
+                            <div class="column">
+                                <div class="ui compact segment" id="connected">
+                                    <script>connected_toggle('off')</script>
+                                </div>
+                            </div>
+
+                            <!-- Calibrating Indicator -->
+                            <div class="column">
+                                <div class="ui compact segment" id="calibrating">
+                                    <script>calibrating_toggle('off')</script>
+                                </div>
+                            </div>
+
+                            <!-- Error Indicator -->
+                            <div class="column">
+                                <div class="ui compact segment" id="error">
+                                    <script>error_toggle('off')</script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inflation Timings and Submit -->
+                    <div class="ui attached segment">
+                        <div class="ui four column grid">
+                            <!-- Bag 1 Label and Input -->
+                            <div class="column">
+                                <label class="baglabel">Bag 1</label>
+                                <div class="ui input focus">
+                                    <input type="number" id="b1" placeholder="0" min="0">
+                                </div>
+                            </div>
+
+                            <!-- Bag 2 Label and Input -->
+                            <div class="column">
+                                <label class="baglabel">Bag 2</label>
+                                <div class="ui input focus">
+                                    <input type="number" id="b2" placeholder="0" min="0">
+                                </div>
+                            </div>
+
+                            <!-- Bag 3 Label and Input -->
+                            <div class="column">
+                                <label class="baglabel">Bag 3</label>
+                                <div class="ui input focus">
+                                    <input type="number" id="b3" placeholder="0" min="0">
+                                </div>
+                            </div>
+
+                            <!-- Bag 4 Label and Input -->
+                            <div class="column">
+                                <label class="baglabel">Bag 4</label>
+                                <div class="ui input focus">
+                                    <input type="number" id="b4" placeholder="0" min="0">
+                                </div>
+                            </div>
+
+                            <!-- Arm/Disarm Button -->
+                            <button class="ui disabled button" id="arm_button" onclick="arm_button()">Arm Device</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Graphics Stylesheet -->
+        <link rel="stylesheet" href="./static/css/dashboard2.css">
+
+        <!-- Script Imports -->
+        <script src="semantic/semantic.min.js"></script>
+        <script src="./static/js/sketch.js"></script>
+        <script src="./static/js/start_server.js"></script>
+        <script src="static/js/button_click.js"></script>
+    </body>
+</html>

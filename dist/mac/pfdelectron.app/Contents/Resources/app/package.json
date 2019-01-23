@@ -1,0 +1,16 @@
+{
+  "name": "pfdelectron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "fix-path": "^2.1.0",
+    "jquery": "^3.3.1",
+    "p5": "^0.7.2",
+    "popper.js": "^1.14.6",
+    "socket.io": "^2.2.0"
+  }
+}

@@ -1,0 +1,30 @@
+.ui.top.attached.header {
+  background-color: #326882;
+}
+
+.ui.grid {
+  background-color: #4395bbd6;
+}
+
+#arm_button {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.ui.top.attached.header {
+  color: #b5cc18;
+}
+
+#headerLabel {
+  margin: auto;
+  width: 30%;
+}
+
+.ui.input.focus {
+  margin-top: 5px;
+}
+
+.baglabel {
+  margin-bottom: 10px;
+  font-weight: bold;
+}

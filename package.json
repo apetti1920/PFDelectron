@@ -1,0 +1,43 @@
+{
+  "name": "pfdelectron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.0.0",
+    "electron-builder": "^20.38.5"
+  },
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "fix-path": "^2.1.0",
+    "jquery": "^3.3.1",
+    "p5": "^0.7.2",
+    "popper.js": "^1.14.6",
+    "socket.io": "^2.2.0"
+  },
+  "build": {
+    "asar": false,
+    "appId": "com.aidan.quickstart",
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "category": "your.app.category.type"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apetti1920/PFDelectron.git"
+  },
+  "bugs": {
+    "url": "https://github.com/apetti1920/PFDelectron/issues"
+  },
+  "homepage": "https://github.com/apetti1920/PFDelectron#readme"
+}

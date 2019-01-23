@@ -1,0 +1,14 @@
+.p5Canvas {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+body {
+     overflow-y: hidden;
+ }
+
+.ui.compact.segment{
+    background-color: #fff;
+}
